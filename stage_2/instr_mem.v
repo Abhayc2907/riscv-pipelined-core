@@ -15,5 +15,5 @@ module instr_mem #(
  
     // Byte address -> word index. addr[31:2] selects the word.
     assign instr = mem[addr[31:2]];
- 
+
 endmodule
