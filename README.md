@@ -17,7 +17,7 @@ Each stage is independently testable and lives in its own folder. Every module �
 - **Stage 5 — Control hazards**: `beq`/`bne` resolved in the EX stage (reusing Stage 3's forwarding for branch operands), with a 2-cycle flush of speculatively-fetched instructions on a taken branch.
 - **Stage 6 — Comprehensive verification**: Every R-type and I-type ALU operation `control_unit.v` has supported since Stage 1 — but never actually been run — verified through the full pipeline (forwarding + stalling + branch flush all active simultaneously), including logical-vs-arithmetic shift and signed-vs-unsigned comparison edge cases.
 
-## Known gaps (honest scope)
+## Known gaps 
 
 This core implements a functional, hazard-correct subset of RV32I — not the full ISA. Explicitly **not yet implemented**:
 - `blt`, `bge`, `bltu`, `bgeu` — control unit decodes them, but EX-stage branch decision logic only handles `beq`/`bne`
